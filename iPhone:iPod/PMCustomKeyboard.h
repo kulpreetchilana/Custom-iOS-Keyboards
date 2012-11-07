@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
-#define kAppName @"Punjabi Keyboard"
 #define kFont [UIFont fontWithName:@"GurmukhiMN" size:20]
 #define kAltLabel @"੧੨੩"
 #define kReturnLabel @"ਅਗਲਾ"
