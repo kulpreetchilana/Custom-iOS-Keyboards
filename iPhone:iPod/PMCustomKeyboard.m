@@ -457,6 +457,7 @@ enum {
     CFRelease(path);
     
     return imageRef;
+    CGImageRelease(imageRef);
 }
 
 
