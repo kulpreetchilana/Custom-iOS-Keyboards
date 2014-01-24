@@ -63,6 +63,20 @@
 	self.returnButton.titleLabel.adjustsFontSizeToFitWidth = YES;
 	
 	[self loadCharactersWithArray:kChar];
+    
+    // Keyboard Customization for iOS 7
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
+        [self.keyboardBackground setImage:[UIImage imageNamed:@"Keyboard_Blank_iOS7.png"]];
+        for (UIButton *b in self.shiftButtons) {
+            [b setShowsTouchWhenHighlighted:NO];
+        }
+        for (UIButton *b in buttons) {
+            [b setBackgroundImage:[PKCustomKeyboard imageFromColor:[UIColor colorWithWhite:0.7 alpha:0.5]]
+                         forState:UIControlStateHighlighted];
+            b.layer.cornerRadius = 6.0;
+            b.titleLabel.shadowOffset = CGSizeMake(0, 0);
+        }
+    }
 	
 	return self;
 }
@@ -111,7 +125,12 @@
 - (IBAction)shiftPressed:(id)sender {
 	[[UIDevice currentDevice] playInputClick];
 	if (!self.isShifted) {
-		[self.keyboardBackground setImage:[UIImage imageNamed:@"Keyboard_Shift.png"]];
+		if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
+            [self.keyboardBackground setImage:[UIImage imageNamed:@"Keyboard_Shift_iOS7.png"]];
+        }
+        else {
+            [self.keyboardBackground setImage:[UIImage imageNamed:@"Keyboard_Shift.png"]];
+        }
 		[self loadCharactersWithArray:kChar_shift];
 		for (UIButton *b in self.altButtons)
 			[b setTitle:kAltLabel forState:UIControlStateNormal];
@@ -120,7 +139,12 @@
 
 - (IBAction)unShift {
 	if (self.isShifted) {
-		[self.keyboardBackground setImage:[UIImage imageNamed:@"Keyboard_Blank.png"]];
+        if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
+            [self.keyboardBackground setImage:[UIImage imageNamed:@"Keyboard_Blank_iOS7.png"]];
+        }
+        else {
+            [self.keyboardBackground setImage:[UIImage imageNamed:@"Keyboard_Blank.png"]];
+        }
 		[self loadCharactersWithArray:kChar];
 	}
 	if (!self.isShifted)
@@ -131,7 +155,12 @@
 
 - (IBAction)altPressed:(id)sender {
     [[UIDevice currentDevice] playInputClick];
-	[self.keyboardBackground setImage:[UIImage imageNamed:@"Keyboard_Blank.png"]];
+	if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
+        [self.keyboardBackground setImage:[UIImage imageNamed:@"Keyboard_Blank_iOS7.png"]];
+    }
+    else {
+        [self.keyboardBackground setImage:[UIImage imageNamed:@"Keyboard_Blank.png"]];
+    }
 	self.shifted = NO;
 	UIButton *button = (UIButton *)sender;
 	
