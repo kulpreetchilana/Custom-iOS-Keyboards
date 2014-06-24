@@ -113,13 +113,25 @@
 
 /* IBActions for Keyboard Buttons */
 
-- (IBAction)returnPressed:(id)sender {
+- (IBAction)returnPressed:(id)sender
+{
     [[UIDevice currentDevice] playInputClick];
-	[self.textView insertText:@"\n"];
+
 	if ([self.textView isKindOfClass:[UITextView class]])
+    {
+        [self.textView insertText:@"\n"];
 		[[NSNotificationCenter defaultCenter] postNotificationName:UITextViewTextDidChangeNotification object:self.textView];
+    }
 	else if ([self.textView isKindOfClass:[UITextField class]])
-		[[NSNotificationCenter defaultCenter] postNotificationName:UITextFieldTextDidChangeNotification object:self.textView];
+    {
+        // -- Erik van der Neut, 24/06/2014: --
+        // When typing text into a TextField, the Enter key should trigger the
+        // textFieldShouldReturn: delegate method instead of adding \n.  From the
+        // official UITextField documentation: "A UITextField object is a control
+        // that displays editable text and sends an action message to a target
+        // object when the user presses the return button."
+        [[(UITextField *)self.textView delegate] textFieldShouldReturn:(UITextField *)self.textView];
+    }
 }
 
 - (IBAction)shiftPressed:(id)sender {
