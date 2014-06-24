@@ -130,7 +130,10 @@
         // official UITextField documentation: "A UITextField object is a control
         // that displays editable text and sends an action message to a target
         // object when the user presses the return button."
-        [[(UITextField *)self.textView delegate] textFieldShouldReturn:(UITextField *)self.textView];
+        if ([[(UITextField *)self.textView delegate] respondsToSelector:@selector(textFieldShouldReturn:)])
+        {
+            [[(UITextField *)self.textView delegate] textFieldShouldReturn:(UITextField *)self.textView];
+        }
     }
 }
 
