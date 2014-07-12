@@ -124,12 +124,6 @@
     }
 	else if ([self.textView isKindOfClass:[UITextField class]])
     {
-        // -- Erik van der Neut, 24/06/2014: --
-        // When typing text into a TextField, the Enter key should trigger the
-        // textFieldShouldReturn: delegate method instead of adding \n.  From the
-        // official UITextField documentation: "A UITextField object is a control
-        // that displays editable text and sends an action message to a target
-        // object when the user presses the return button."
         if ([[(UITextField *)self.textView delegate] respondsToSelector:@selector(textFieldShouldReturn:)])
         {
             [[(UITextField *)self.textView delegate] textFieldShouldReturn:(UITextField *)self.textView];
