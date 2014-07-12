@@ -164,13 +164,22 @@ enum {
 
 /* IBActions for Keyboard Buttons */
 
-- (IBAction)returnPressed:(id)sender {
+- (IBAction)returnPressed:(id)sender
+{
     [[UIDevice currentDevice] playInputClick];
-	[self.textView insertText:@"\n"];
+
 	if ([self.textView isKindOfClass:[UITextView class]])
+    {
+        [self.textView insertText:@"\n"];
 		[[NSNotificationCenter defaultCenter] postNotificationName:UITextViewTextDidChangeNotification object:self.textView];
+    }
 	else if ([self.textView isKindOfClass:[UITextField class]])
-		[[NSNotificationCenter defaultCenter] postNotificationName:UITextFieldTextDidChangeNotification object:self.textView];
+    {
+        if ([[(UITextField *)self.textView delegate] respondsToSelector:@selector(textFieldShouldReturn:)])
+        {
+            [[(UITextField *)self.textView delegate] textFieldShouldReturn:(UITextField *)self.textView];
+        }
+    }
 }
 
 - (IBAction)shiftPressed:(id)sender {
