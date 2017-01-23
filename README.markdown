@@ -3,6 +3,8 @@ Custom Keyboards for iOS
 
 #### An easily customizable iOS keyboard ####
 
+![image](https://github.com/WhisperRain/HttpsBaseOnAfn/blob/master/IMG_0194.PNG)
+
 Custom Keyboards for iOS allows you to create a keyboard `inputView` that looks and feels just like the iPad or iPhone/iPod touch keyboard. It is particularly useful for developers who are looking to add keyboard input for language that is not natively supported by iOS. The included example project is for a Punjabi keyboard.
 
 ## Installation & Usage
