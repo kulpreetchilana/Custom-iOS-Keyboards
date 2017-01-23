@@ -74,7 +74,7 @@
         textField.textAlignment=NSTextAlignmentLeft;
         [backImage addSubview:textField];
         
-        _rewardLabel=[[UILabel alloc]initWithFrame:CGRectMake((WIDTH-74)/2.0, 111, 60, 26)];
+        _rewardLabel=[[UILabel alloc]initWithFrame:CGRectMake((WIDTH-74)/2.0, 103, 60, 26)];
         _rewardLabel.textAlignment=NSTextAlignmentRight;
         _rewardLabel.text=@"0.00";
         _rewardLabel.font=PingFangFontOfSize(26);
@@ -82,7 +82,7 @@
         [containerView addSubview:_rewardLabel];
         
         
-        _subrewardLabel=[[UILabel alloc]initWithFrame:CGRectMake((WIDTH-74)/2.0+60+2, 123, 12, 12)];
+        _subrewardLabel=[[UILabel alloc]initWithFrame:CGRectMake((WIDTH-74)/2.0+60+2, 113, 12, 12)];
         _subrewardLabel.textAlignment=NSTextAlignmentLeft;
         _subrewardLabel.text=@"元";
         _subrewardLabel.font=PingFangFontOfSize(12);
@@ -142,8 +142,8 @@
         }
         float xValue=(WIDTH-temp-14)/2.0;
         
-        _rewardLabel.frame=CGRectMake(xValue, 111,temp, 26);
-        _subrewardLabel.frame=CGRectMake(xValue+temp+2, 123, 12, 12);
+        _rewardLabel.frame=CGRectMake(xValue, 103,temp, 26);
+        _subrewardLabel.frame=CGRectMake(xValue+temp+2, 113, 12, 12);
     }
     
     if([textField.text length]<10){
