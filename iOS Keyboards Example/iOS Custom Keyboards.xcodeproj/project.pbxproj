@@ -42,6 +42,11 @@
 		A36D570A189325BF00A2F078 /* return@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A36D56F2189325BF00A2F078 /* return@2x.png */; };
 		A36D570B189325BF00A2F078 /* PMCustomKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = A36D56F4189325BF00A2F078 /* PMCustomKeyboard.m */; };
 		A36D570C189325BF00A2F078 /* PMCustomKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = A36D56F5189325BF00A2F078 /* PMCustomKeyboard.xib */; };
+		DE90343E1E35AED1003687EA /* MMNumberKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = DE90343B1E35AED1003687EA /* MMNumberKeyboard.m */; };
+		DE90343F1E35AED1003687EA /* QMCalculateView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE90343D1E35AED1003687EA /* QMCalculateView.m */; };
+		DE9034411E35B06D003687EA /* deleteButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE9034401E35B06D003687EA /* deleteButton@2x.png */; };
+		DE9034441E35B097003687EA /* WPSFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9034431E35B097003687EA /* WPSFactory.m */; };
+		DE9034461E35B6E1003687EA /* 关闭@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE9034451E35B6E1003687EA /* 关闭@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +92,14 @@
 		A36D56F3189325BF00A2F078 /* PMCustomKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMCustomKeyboard.h; sourceTree = "<group>"; };
 		A36D56F4189325BF00A2F078 /* PMCustomKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMCustomKeyboard.m; sourceTree = "<group>"; };
 		A36D56F5189325BF00A2F078 /* PMCustomKeyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PMCustomKeyboard.xib; sourceTree = "<group>"; };
+		DE90343A1E35AED1003687EA /* MMNumberKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMNumberKeyboard.h; sourceTree = "<group>"; };
+		DE90343B1E35AED1003687EA /* MMNumberKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMNumberKeyboard.m; sourceTree = "<group>"; };
+		DE90343C1E35AED1003687EA /* QMCalculateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMCalculateView.h; sourceTree = "<group>"; };
+		DE90343D1E35AED1003687EA /* QMCalculateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMCalculateView.m; sourceTree = "<group>"; };
+		DE9034401E35B06D003687EA /* deleteButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "deleteButton@2x.png"; sourceTree = "<group>"; };
+		DE9034421E35B097003687EA /* WPSFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPSFactory.h; sourceTree = "<group>"; };
+		DE9034431E35B097003687EA /* WPSFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPSFactory.m; sourceTree = "<group>"; };
+		DE9034451E35B6E1003687EA /* 关闭@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "关闭@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +207,7 @@
 				A36D56F3189325BF00A2F078 /* PMCustomKeyboard.h */,
 				A36D56F4189325BF00A2F078 /* PMCustomKeyboard.m */,
 				A36D56F5189325BF00A2F078 /* PMCustomKeyboard.xib */,
+				DE9034391E35AECB003687EA /* keyboardByWhisperRain */,
 			);
 			name = "iPhone:iPod";
 			path = "../iPhone:iPod";
@@ -215,6 +229,21 @@
 				A36D56F2189325BF00A2F078 /* return@2x.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		DE9034391E35AECB003687EA /* keyboardByWhisperRain */ = {
+			isa = PBXGroup;
+			children = (
+				DE9034451E35B6E1003687EA /* 关闭@2x.png */,
+				DE9034401E35B06D003687EA /* deleteButton@2x.png */,
+				DE9034421E35B097003687EA /* WPSFactory.h */,
+				DE9034431E35B097003687EA /* WPSFactory.m */,
+				DE90343A1E35AED1003687EA /* MMNumberKeyboard.h */,
+				DE90343B1E35AED1003687EA /* MMNumberKeyboard.m */,
+				DE90343C1E35AED1003687EA /* QMCalculateView.h */,
+				DE90343D1E35AED1003687EA /* QMCalculateView.m */,
+			);
+			path = keyboardByWhisperRain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +275,11 @@
 				CLASSPREFIX = UT;
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Kulpreet Chilana";
+				TargetAttributes = {
+					A366115D1649D4B500088AF4 = {
+						DevelopmentTeam = G6TKW5L4KR;
+					};
+				};
 			};
 			buildConfigurationList = A36611581649D4B500088AF4 /* Build configuration list for PBXProject "iOS Custom Keyboards" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -283,6 +317,7 @@
 				A36D5702189325BF00A2F078 /* delete_iOS7.png in Resources */,
 				A36D56FB189325BF00A2F078 /* Keyboard_Shift@2x.png in Resources */,
 				A36D56FC189325BF00A2F078 /* Keyboard_Shift_iOS7.png in Resources */,
+				DE9034461E35B6E1003687EA /* 关闭@2x.png in Resources */,
 				A36D56F8189325BF00A2F078 /* Keyboard_Blank_iOS7.png in Resources */,
 				A36611771649D4B500088AF4 /* Default@2x.png in Resources */,
 				A36611791649D4B500088AF4 /* Default-568h@2x.png in Resources */,
@@ -296,6 +331,7 @@
 				A366117F1649D4B500088AF4 /* MainStoryboard_iPad.storyboard in Resources */,
 				A36D56FA189325BF00A2F078 /* Keyboard_Shift.png in Resources */,
 				A36D570C189325BF00A2F078 /* PMCustomKeyboard.xib in Resources */,
+				DE9034411E35B06D003687EA /* deleteButton@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,8 +343,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A36D56FE189325BF00A2F078 /* PKCustomKeyboard.m in Sources */,
+				DE9034441E35B097003687EA /* WPSFactory.m in Sources */,
 				A366116F1649D4B500088AF4 /* main.m in Sources */,
+				DE90343F1E35AED1003687EA /* QMCalculateView.m in Sources */,
 				A36611731649D4B500088AF4 /* UTAppDelegate.m in Sources */,
+				DE90343E1E35AED1003687EA /* MMNumberKeyboard.m in Sources */,
 				A36D570B189325BF00A2F078 /* PMCustomKeyboard.m in Sources */,
 				A36611821649D4B500088AF4 /* UTViewController.m in Sources */,
 			);
@@ -399,9 +438,11 @@
 		A36611861649D4B500088AF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOS Custom Keyboards/iOS Custom Keyboards-Prefix.pch";
 				INFOPLIST_FILE = "iOS Custom Keyboards/iOS Custom Keyboards-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -410,9 +451,11 @@
 		A36611871649D4B500088AF4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOS Custom Keyboards/iOS Custom Keyboards-Prefix.pch";
 				INFOPLIST_FILE = "iOS Custom Keyboards/iOS Custom Keyboards-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

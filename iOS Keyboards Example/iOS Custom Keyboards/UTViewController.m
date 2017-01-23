@@ -7,6 +7,8 @@
 //
 
 #import "UTViewController.h"
+#import "QMCalculateView.h"
+
 
 @interface UTViewController ()
 
@@ -35,5 +37,23 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)showMyCustomKeyboard:(id)sender {
+//    UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
+    UIWindow *keyWindow = [[[UIApplication sharedApplication] delegate] window];
+    QMCalculateView *calculator = [[QMCalculateView alloc] initWithFrame:keyWindow.bounds andProductInfo:@"8.5"];
+    [calculator show];
+    
+    
+}
+
+- (IBAction)showKeyBoardOfIphone:(id)sender {
+    UIWindow *keyWindow = [[[UIApplication sharedApplication] delegate] window];
+    QMCalculateView *calculator = [[QMCalculateView alloc] initWithFrame:keyWindow.bounds andProductInfo:@"8.5"];
+    [calculator show];
+    
+}
+
+
+
 
 @end
